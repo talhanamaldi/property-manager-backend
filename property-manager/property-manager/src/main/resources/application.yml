@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: property-manager-service
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/property_manager
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  open-in-view: false
+  jackson:
+    mapper:
+      accept_case_insensitive_properties: true
+
+app:
+  jwt:
+    secret: "replace-with-256-bit-random-string"
+    expiration-ms: 3600000
+    issuer: "property-manager"
+
+
+management:
+  endpoint.health.show-details: always
+  endpoints.web.exposure.include: health,info,metrics,prometheus
+  metrics:
+    enable.jvm: true
+    distribution.percentiles-histogram.http.server.requests: true

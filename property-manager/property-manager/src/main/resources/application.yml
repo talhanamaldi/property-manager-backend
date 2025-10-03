@@ -9,24 +9,21 @@ spring:
       repositories:
         enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/property_manager
+    url: jdbc:postgresql://pgsql.ankaref.com:5432/property_manager
     username: postgres
-    password: postgres
+    password: Web1970+
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-  open-in-view: false
   jackson:
     mapper:
       accept_case_insensitive_properties: true
 
 app:
   jwt:
-    secret: "replace-with-256-bit-random-string"
-    expiration-ms: 3600000
+    secret: "3ISZU0Pn2lgovzn2wTYkvPpv726xH2TYyFB2vqP8xes="
+    access-exp: 3600
     issuer: "property-manager"
 
 

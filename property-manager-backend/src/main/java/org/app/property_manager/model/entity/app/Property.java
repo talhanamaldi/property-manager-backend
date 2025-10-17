@@ -27,9 +27,8 @@ public class Property extends BaseEntity {
     @Column(name = "name")
     private String fileName;
 
-    @JdbcTypeCode(SqlTypes.JSON)
-    @Column(name = "content", columnDefinition = "jsonb", nullable = false)
-    private JsonNode content;
+    @Column(name = "content")
+    private String content;
 
     @ManyToOne
     private Branch branch;

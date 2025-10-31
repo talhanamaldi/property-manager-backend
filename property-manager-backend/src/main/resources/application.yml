@@ -23,7 +23,7 @@ spring:
 app:
   jwt:
     secret: "i3K8kqJ8gZ0q5YkW9tO6vQzD5hT7xN4eC2rU9lS1pF8dG7yA0jH6bE3vM5sQ2nT"
-    access-exp: 3600
+    access-exp: 60
     issuer: "property-manager"
 
 
